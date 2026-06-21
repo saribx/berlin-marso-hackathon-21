@@ -1,0 +1,12 @@
+# Submission manifest. Filled in for the medium-only push (see SUBMISSION.md for the format).
+# easy/hard are intentionally omitted for now -- add their `levels:` entries once trained
+# (each level scores 0 until declared here; weights: easy 0.2, medium 0.3, hard 0.5).
+
+team: "Pendus"   # TODO: set your team name
+
+policy: warehouse_sort.il_policy:load_dp
+obs_mode: state
+
+levels:
+  medium:
+    checkpoint: il/baselines/diffusion_policy/runs/warehouse_state_dp_medium/checkpoints/best_eval_sort_accuracy.pt
